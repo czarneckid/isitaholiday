@@ -15,6 +15,7 @@ The API will also accept a `timezone` parameter to check to see if it's Cinco de
 Sample endpoints:
 
 [http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo](http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo)
+
 [http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo?timezone=Asia/Kathmandu](http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo?timezone=Asia/Kathmandu)
 
 ## Contributing
