@@ -19,15 +19,19 @@ describe 'IsItCincoDeMayo::API' do
   describe 'check' do
     describe '#isitcincodemayo/:timezone' do
       it 'should respond correctly if it is Cinco de Mayo' do
-        get '/api/v1/check/isitcincodemayo'
-        last_response.should be_ok
-        JSON.parse(last_response.body)['status'].should == true
+        Timecop.freeze(Time.local(2012, 5, 5, 12, 0, 0)) do
+          get '/api/v1/check/isitcincodemayo'
+          last_response.should be_ok
+          JSON.parse(last_response.body)['status'].should == true
+        end
       end
 
       it 'should respond correctly if it is Cinco de Mayo with a timezone parameter' do
-        get '/api/v1/check/isitcincodemayo', :timezone => 'America/Los_Angeles'
-        last_response.should be_ok
-        JSON.parse(last_response.body)['status'].should == true
+        Timecop.freeze(Time.local(2011, 5, 5, 12, 0, 0)) do
+          get '/api/v1/check/isitcincodemayo', :timezone => 'America/Los_Angeles'
+          last_response.should be_ok
+          JSON.parse(last_response.body)['status'].should == true
+        end
       end
 
       it 'should respond correctly if it is not Cinco de Mayo' do
