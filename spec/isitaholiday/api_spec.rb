@@ -26,6 +26,13 @@ describe 'IsItAHoliday::API' do
             json['status'].should == true
             json['name'].should == 'Cinco de Mayo'
           end
+
+          get '/api/v1/check/CincoDeMayo/'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == true
+            json['name'].should == 'Cinco de Mayo'
+          end
         end
       end
 
