@@ -14,7 +14,7 @@ The API will also accept a `timezone` parameter to check to see if it's still a 
 
 All API responses are in JSON.
 
-Sample endpoints and JSON responses:
+Sample endpoints and JSON responses (assuming it actually IS Cinco de Mayo):
 
 [http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/](http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/)
 
