@@ -32,10 +32,10 @@ Sample endpoints and JSON responses (assuming it actually IS Cinco de Mayo):
 
 The current list of known holidays. Format is :holiday - Full holiday name.
 
-* cincodemayo - Cinco de Mayo
-* halloween - Halloween
-* thanksgiving - Thanksgiving
-* christmas - Christmas 
+* `cincodemayo` - Cinco de Mayo
+* `halloween` - Halloween
+* `thanksgiving` - Thanksgiving
+* `christmas` - Christmas 
 
 ## Contributing
 
