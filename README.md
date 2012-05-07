@@ -12,11 +12,21 @@ It has one endpoint you care about:
 
 The API will also accept a `timezone` parameter to check to see if it's still a holiday in the timezone where you live!
 
-Sample endpoints:
+All API responses are in JSON.
+
+Sample endpoints and JSON responses:
 
 [http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/](http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/)
 
+```
+{"status":true,"name":"Cinco de Mayo"}
+```
+
 [http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo?timezone=Asia/Kathmandu](http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo?timezone=Asia/Kathmandu)
+
+```
+{"status":true,"name":"Cinco de Mayo"}
+```
 
 ## Contributing
 
