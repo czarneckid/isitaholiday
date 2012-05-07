@@ -88,6 +88,26 @@ describe 'IsItAHoliday::API' do
           end
         end
       end
+
+      it 'should respond correctly about Thanksgiving' do
+        Timecop.freeze(Time.local(2012, 11, 22, 12, 0, 0)) do
+          get '/api/v1/check/thanksgiving'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == true
+            json['name'].should == 'Thanksgiving'
+          end
+        end
+
+        Timecop.freeze(Time.local(2012, 11, 21, 12, 0, 0)) do
+          get '/api/v1/check/thanksgiving'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == false
+            json['name'].should == 'Thanksgiving'
+          end
+        end
+      end
     end
   end
 end

@@ -16,6 +16,11 @@ module IsItAHoliday
       },
       :name => 'Halloween'
     },
+    :thanksgiving => {
+      :type => :language,
+      :rule => '4th thursday in november',
+      :name => 'Thanksgiving'
+    },
     :christmas => {
       :type => :month_day,
       :rules => {

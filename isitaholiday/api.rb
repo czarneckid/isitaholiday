@@ -3,6 +3,7 @@ require 'active_support'
 require 'active_support/time'
 require 'time'
 require 'tzinfo'
+require 'chronic'
 require 'isitaholiday/holidays'
 
 module IsItAHoliday
@@ -31,6 +32,11 @@ module IsItAHoliday
           when :month_day
             Time.use_zone(params[:timezone]) do
               is_it_the_holiday = (Time.zone.now.day == holiday_information[:rules][:day] && Time.zone.now.month == holiday_information[:rules][:month])
+            end
+          when :language
+            Time.use_zone(params[:timezone]) do
+              holiday_time = Chronic.parse(holiday_information[:rule])
+              is_it_the_holiday = (Time.zone.now.day == holiday_time.day && Time.zone.now.month == holiday_time.month)
             end
           end
 

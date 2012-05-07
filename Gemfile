@@ -6,6 +6,7 @@ gem 'unicorn', '4.2.0'
 
 gem 'activesupport'
 gem 'tzinfo'
+gem 'chronic'
 
 group :development do
   gem 'heroku'
