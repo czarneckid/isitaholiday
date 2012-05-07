@@ -1,22 +1,22 @@
-# Is it Cinco de Mayo?
+# Is it a holiday?
 
-This is an API to check if it is Cinco de Mayo.
+This is an API to check if it is a holiday.
 
 ## API
 
 It has one endpoint you care about:
 
 ```
-/api/v1/check/isitcincodemayo/
+/api/v1/check/:holiday/
 ```
 
-The API will also accept a `timezone` parameter to check to see if it's Cinco de Mayo in the timezone where you live!
+The API will also accept a `timezone` parameter to check to see if it's still a holiday in the timezone where you live!
 
 Sample endpoints:
 
-[http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo](http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo)
+[http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/](http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo/)
 
-[http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo?timezone=Asia/Kathmandu](http://isitcincodemayo.herokuapp.com/api/v1/check/isitcincodemayo?timezone=Asia/Kathmandu)
+[http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo?timezone=Asia/Kathmandu](http://isitaholiday.herokuapp.com/api/v1/check/cincodemayo?timezone=Asia/Kathmandu)
 
 ## Contributing
 

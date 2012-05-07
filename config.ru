@@ -1,8 +1,8 @@
 $LOAD_PATH << '.'
 
 require 'rack'
-require 'isitcincodemayo/api'
+require 'isitaholiday/api'
 
 run Rack::Cascade.new([
-  IsItCincoDeMayo::API
+  IsItAHoliday::API
 ])
