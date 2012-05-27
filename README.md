@@ -34,6 +34,7 @@ The current list of known holidays. Format is :holiday - Full holiday name.
 
 * `cincodemayo` - Cinco de Mayo
 * `halloween` - Halloween
+* `memorial_day` - Memorial Day
 * `thanksgiving` - Thanksgiving
 * `christmas` - Christmas 
 
