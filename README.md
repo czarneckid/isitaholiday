@@ -28,6 +28,15 @@ Sample endpoints and JSON responses (assuming it actually IS Cinco de Mayo):
 {"status":true,"name":"Cinco de Mayo"}
 ```
 
+## Known Holidays
+
+The current list of known holidays. Format is :holiday - Full holiday name.
+
+* `cincodemayo` - Cinco de Mayo
+* `halloween` - Halloween
+* `thanksgiving` - Thanksgiving
+* `christmas` - Christmas 
+
 ## Contributing
 
 1. Fork it
