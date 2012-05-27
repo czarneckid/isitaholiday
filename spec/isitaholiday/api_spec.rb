@@ -58,6 +58,28 @@ describe 'IsItAHoliday::API' do
         end
       end
 
+      it 'should respond correctly if it is Memorial Day' do
+        Timecop.freeze(Time.local(2012, 5, 28, 12, 0, 0)) do
+          get '/api/v1/check/memorial_day/'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == true
+            json['name'].should == 'Memorial Day'
+          end
+        end
+      end
+
+      it 'should respond correctly if it is Memorial Day in a past year for reference checking' do
+        Timecop.freeze(Time.local(2008, 5, 26, 12, 0, 0)) do
+          get '/api/v1/check/memorial_day/'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == true
+            json['name'].should == 'Memorial Day'
+          end
+        end
+      end
+
       it 'should respond correctly if it is an unknown holiday' do
         get '/api/v1/check/gooble-gobble/'
         last_response.should be_ok

@@ -35,7 +35,7 @@ module IsItAHoliday
             end
           when :language
             Time.use_zone(params[:timezone]) do
-              holiday_time = Chronic.parse(holiday_information[:rule])
+              holiday_time = Chronic.parse(holiday_information[:rule], :now => Chronic.parse(holiday_information[:reference]))
               is_it_the_holiday = (Time.zone.now.day == holiday_time.day && Time.zone.now.month == holiday_time.month)
             end
           end

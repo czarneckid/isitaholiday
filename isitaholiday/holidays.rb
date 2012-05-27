@@ -16,6 +16,12 @@ module IsItAHoliday
       },
       :name => 'Halloween'
     },
+    :memorial_day => {
+      :type => :language,
+      :rule => 'last monday',
+      :reference => 'june 1st',
+      :name => 'Memorial Day'
+    },
     :thanksgiving => {
       :type => :language,
       :rule => '4th thursday in november',
