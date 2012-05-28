@@ -25,24 +25,17 @@ module IsItAHoliday
     end
 
     resource :holidays do
-      get '/today' do
-        params[:timezone] ||= 'America/New_York'
-
-        Time.use_zone(params[:timezone]) do
-          @holidays = ::Holidays.on(Time.zone.now, :any)
-        end
-
-        {:status => true, :holidays => @holidays}
-      end
-
       get '/:holiday' do
         params[:timezone] ||= 'America/New_York'
 
         Time.use_zone(params[:timezone]) do
-          @holidays = ::Holidays.on(Time.zone.now, :any, :observed, :informal)
-          holiday_information = @holidays.select {|holiday| holiday[:name].gsub(%r/ /, '_').underscore.eql?(params[:holiday])}
-          if holiday_information.size > 0
-            {:status => true, :holidays => holiday_information}
+          holidays = ::Holidays.on(Time.zone.now, :any, :observed, :informal)
+          unless 'today'.eql?(params[:holiday])
+            holidays = holidays.select {|holiday| holiday[:name].gsub(%r/ /, '_').underscore.eql?(params[:holiday])}
+          end
+
+          if holidays.size > 0
+            {:status => true, :holidays => holidays}
           else
             {:status => false}
           end
