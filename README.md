@@ -64,13 +64,13 @@ for the current day.
 
 Below are a few sample API responses:
 
-`/api/v2/holidays/today`
+Endpoint: `/api/v2/holidays/today`
 
 ```json
 {:status=>true, :holidays=>[{:date=>Mon, 28 May 2012, :name=>"Pfingstmontag", :regions=>[:at, :de, :li]}, {:date=>Mon, 28 May 2012, :name=>"2. Pinsedag", :regions=>[:dk]}, {:date=>Mon, 28 May 2012, :name=>"Lundi de Pentecôte", :regions=>[:fr]}, {:date=>Mon, 28 May 2012, :name=>"Annar í hvítasunnu", :regions=>[:is]}, {:date=>Mon, 28 May 2012, :name=>"Pinksteren", :regions=>[:nl]}, {:date=>Mon, 28 May 2012, :name=>"2. pinsedag", :regions=>[:no]}, {:date=>Mon, 28 May 2012, :name=>"Bank Holiday", :regions=>[:gb]}, {:date=>Mon, 28 May 2012, :name=>"Memorial Day", :regions=>[:us, :nyse, :ups]}]}
 ```
 
-`/api/v2/holidays/memorial_day`
+Endpoint: `/api/v2/holidays/memorial_day`
 
 ```json
 {"status":true,"holidays":[{"date":"2012-05-28","name":"Memorial Day","regions":["us","nyse","ups"]}]}
