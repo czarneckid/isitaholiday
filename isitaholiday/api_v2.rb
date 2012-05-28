@@ -10,6 +10,8 @@ require 'holidays'
 
 module IsItAHoliday
   class API::V2 < Grape::API
+    content_type :json, "application/json; charset=UTF-8"
+
     prefix 'api'
     version 'v2'
     format :json
