@@ -80,6 +80,12 @@ Example: [http://isitaholiday.herokuapp.com/api/v2/holidays/memorial_day/](http:
 {"status":true,"holidays":[{"date":"2012-05-28","name":"Memorial Day","regions":["us","nyse","ups"]}]}
 ```
 
+If it is an unknown holiday or it is not the day of a given holiday, the API will return:
+
+```json
+{"status":false}
+```
+
 ## Contributing
 
 1. Fork it
