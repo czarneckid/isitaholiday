@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'timecop'
+require 'isitaholiday/api'
 
 describe 'IsItAHoliday::API' do
   def app
