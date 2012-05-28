@@ -66,11 +66,15 @@ Below are a few sample API responses:
 
 Endpoint: `/api/v2/holidays/today`
 
+Example: [http://isitaholiday.herokuapp.com/api/v2/holidays/today/](http://isitaholiday.herokuapp.com/api/v2/holidays/today/)
+
 ```json
 {"status":true,"holidays":[{"date":"2012-05-28","name":"Pfingstmontag","regions":["at","de","li"]},{"date":"2012-05-28","name":"2. Pinsedag","regions":["dk"]},{"date":"2012-05-28","name":"Lundi de Pentecôte","regions":["fr"]},{"date":"2012-05-28","name":"Annar í hvítasunnu","regions":["is"]},{"date":"2012-05-28","name":"Pinksteren","regions":["nl"]},{"date":"2012-05-28","name":"2. pinsedag","regions":["no"]},{"date":"2012-05-28","name":"Bank Holiday","regions":["gb"]},{"date":"2012-05-28","name":"Memorial Day","regions":["us","nyse","ups"]}]}
 ```
 
 Endpoint: `/api/v2/holidays/memorial_day`
+
+Example: [http://isitaholiday.herokuapp.com/api/v2/holidays/memorial_day/](http://isitaholiday.herokuapp.com/api/v2/holidays/memorial_day/)
 
 ```json
 {"status":true,"holidays":[{"date":"2012-05-28","name":"Memorial Day","regions":["us","nyse","ups"]}]}
