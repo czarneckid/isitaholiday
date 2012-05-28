@@ -12,6 +12,7 @@ describe 'IsItAHoliday::API::V2' do
       it 'should respond with pong' do
         get '/api/v2/status/ping'
         last_response.should be_ok
+        last_response.header['Content-Type'].should == 'application/json; charset=UTF-8'
         JSON.parse(last_response.body)['status'].should == 'pong'
       end
     end
@@ -23,7 +24,6 @@ describe 'IsItAHoliday::API::V2' do
         Timecop.freeze(Time.local(2012, 5, 28, 12, 0, 0)) do
           get '/api/v2/holidays/today'
           last_response.should be_ok
-          last_response.header['Content-Type'].should == 'application/json; charset=UTF-8'
           JSON.parse(last_response.body).tap do |json|
             json['status'].should == true
             json['holidays'].size.should == 8
