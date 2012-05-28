@@ -7,6 +7,16 @@ describe 'IsItAHoliday::API::V2' do
     IsItAHoliday::API::V2
   end
 
+  describe 'status' do
+    describe '#ping' do
+      it 'should respond with pong' do
+        get '/api/v2/status/ping'
+        last_response.should be_ok
+        JSON.parse(last_response.body)['status'].should == 'pong'
+      end
+    end
+  end
+
   describe 'holidays' do
     describe 'today' do
       it 'should respond with all the holidays on may 31st' do
@@ -36,6 +46,17 @@ describe 'IsItAHoliday::API::V2' do
       it 'should respond correctly if it is Cinco de Mayo' do
         Timecop.freeze(Time.local(2012, 5, 5, 12, 0, 0)) do
           get '/api/v2/holidays/cinco_de_mayo/'
+          last_response.should be_ok
+          JSON.parse(last_response.body).tap do |json|
+            json['status'].should == true
+            json['holidays'].size.should == 1
+          end
+        end
+      end
+
+      it 'should respond correctly if it is Memorial Day' do
+        Timecop.freeze(Time.local(2012, 5, 28, 12, 0, 0)) do
+          get '/api/v2/holidays/memorial_day/'
           last_response.should be_ok
           JSON.parse(last_response.body).tap do |json|
             json['status'].should == true

@@ -16,6 +16,12 @@ module IsItAHoliday
     error_format :json
     rescue_from :all
 
+    resource :status do
+      get '/ping' do
+        {:status => 'pong'}
+      end
+    end
+
     resource :holidays do
       get '/today' do
         params[:timezone] ||= 'America/New_York'
