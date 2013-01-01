@@ -96,4 +96,4 @@ If it is an unknown holiday or it is not the day of a given holiday, the API wil
 
 ## Copyright
 
-Copyright (c) 2012 David Czarnecki. See LICENSE for further details.
+Copyright (c) 2012-2013 David Czarnecki. See LICENSE for further details.
