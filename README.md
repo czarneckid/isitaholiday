@@ -10,8 +10,8 @@ It has one endpoint you care about:
 /api/v1/check/:holiday/
 ```
 
-The API will also accept a `timezone` parameter to check to see if 
-it's still a holiday in the timezone where you live! The default 
+The API will also accept a `timezone` parameter to check to see if
+it's still a holiday in the timezone where you live! The default
 timezone is set to `America/New_York`.
 
 All API responses are in JSON.
@@ -38,7 +38,7 @@ The current list of known holidays. Format is :holiday - Full holiday name.
 * `halloween` - Halloween
 * `memorial_day` - Memorial Day
 * `thanksgiving` - Thanksgiving
-* `christmas` - Christmas 
+* `christmas` - Christmas
 
 ## API v2
 
@@ -48,19 +48,19 @@ It has one endpoint you care about:
 /api/v2/holidays/:holiday/
 ```
 
-The API will also accept a `timezone` parameter to check to see if 
-it's still a holiday in the timezone where you live! The default 
+The API will also accept a `timezone` parameter to check to see if
+it's still a holiday in the timezone where you live! The default
 timezone is set to `America/New_York`.
 
 All API responses are in JSON.
 
 ### Known holidays
 
-This endpoint uses the [holidays](https://github.com/alexdunae/holidays) gem 
-to get its holiday information. 
+This endpoint uses the [holidays](https://github.com/alexdunae/holidays) gem
+to get its holiday information.
 
-You can use the `:holiday` parameter value of `today` to return all holidays 
-for the current day. 
+You can use the `:holiday` parameter value of `today` to return all holidays
+for the current day.
 
 Below are a few sample API responses:
 
@@ -96,4 +96,4 @@ If it is an unknown holiday or it is not the day of a given holiday, the API wil
 
 ## Copyright
 
-Copyright (c) 2012-2013 David Czarnecki. See LICENSE for further details.
+Copyright (c) 2012-2014 David Czarnecki. See LICENSE for further details.
