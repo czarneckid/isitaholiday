@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Server
-gem 'grape', :git => 'git://github.com/intridea/grape.git', :branch => 'frontier'
-gem 'unicorn', '4.2.0'
+gem 'grape'
+gem 'unicorn'
 
 gem 'activesupport'
 gem 'tzinfo'

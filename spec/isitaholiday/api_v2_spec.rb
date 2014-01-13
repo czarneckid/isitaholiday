@@ -26,7 +26,7 @@ describe 'IsItAHoliday::API::V2' do
           last_response.should be_ok
           JSON.parse(last_response.body).tap do |json|
             json['status'].should == true
-            json['holidays'].size.should == 8
+            json['holidays'].size.should == 10
           end
         end
       end

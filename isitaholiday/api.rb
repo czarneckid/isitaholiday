@@ -7,11 +7,10 @@ require 'chronic'
 require 'isitaholiday/holidays'
 
 module IsItAHoliday
-  class API < Grape::API    
+  class API < Grape::API
     prefix 'api'
     version 'v1'
     format :json
-    error_format :json
     rescue_from :all
 
     resource :status do

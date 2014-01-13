@@ -15,7 +15,6 @@ module IsItAHoliday
     prefix 'api'
     version 'v2'
     format :json
-    error_format :json
     rescue_from :all
 
     resource :status do
